@@ -1,6 +1,21 @@
 import React from 'react';
 import SuggestedFriend from './SuggestedFriend';
 
+var masterSuggestedFeed = [
+  {
+    name: 'Thato',
+    description: 'boy'
+  },
+  {
+    name: 'Haley',
+    description: 'girl'
+  },
+  {
+    name: 'brandon',
+    description: 'unknown'
+  }
+]
+
 function SuggestedFeed() {
   const styles = {
     containerStyle: {
@@ -14,9 +29,12 @@ function SuggestedFeed() {
   return (
     <div style={styles.containerStyle}>
       <p>Lorem Ipsum</p>
-      <SuggestedFriend />
-      <SuggestedFriend />
-      <SuggestedFriend />
+      {masterSuggestedFeed.map((suggestedFriend, index) =>
+        <SuggestedFriend name={suggestedFriend.name}
+          description={suggestedFriend.description}
+          key={index}/>
+      )}
+
 
     </div>
   );

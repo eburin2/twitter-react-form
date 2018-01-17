@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SuggestedFriend() {
+function SuggestedFriend(props) {
   const styles = {
     containerStyle: {
       display: 'flex',
@@ -19,8 +19,8 @@ function SuggestedFriend() {
     <div style={styles.containerStyle}>
       <div style={styles.avatarStyle}></div>
       <div>
-        <p>Donec eu orci et</p>
-        <button>Button</button>
+        <p>{props.name}</p>
+        <p>{props.description}</p>
       </div>
     </div>
   );
