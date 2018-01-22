@@ -3,7 +3,7 @@ import Header from './header/Header';
 import Body from './body/Body';
 import NewNewsFeedForm from './body/NewNewsFeedForm';
 import { Switch, Route } from 'react-router-dom';
-import NewsFeed from './body/NewsFeed';
+// import NewsFeed from './body/NewsFeed';
 
 
 class App extends React.Component {

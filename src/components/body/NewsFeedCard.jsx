@@ -5,9 +5,37 @@ class NewsFeedCard extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      likeStatus: false
+    };
+
+    this.setLike = this.setLike.bind(this);
+    this.setDisLike = this.setDislike.bind(this);
+}
+
+  setLike() {
+    this.setState({likeStatus: true});
   }
 
-  render(){
+  setDislike() {
+    this.setState({likeStatus: false});
+  }
+  render(props){
+    let currentStatus = null;
+    if (this.state.likeStatus) {
+      currentStatus = <p>Liked</p>
+      } else {
+        currentStatus = <p>Not Liked</p>
+      }
+
+    let currentButton = null;
+    if (this.state.likeStatus === true) {
+      currentButton = <button onClick={this.setDislike}>Dislike</button>
+    } else {
+      currentButton = <button onClick={this.setLike}>Like</button>
+    }
+
+
 
     const styles = {
       containerStyle: {
@@ -29,12 +57,14 @@ class NewsFeedCard extends React.Component {
         <div style={styles.flexItem}>
           <h4>{this.props.title}</h4>
           <p>{this.props.description}</p>
-          <button >Like</button>
+          {currentButton}
+          {currentStatus}
         </div>
       </div>
     );
   }
 }
+
 
 NewsFeedCard.propTypes = {
   title: PropTypes.string,
