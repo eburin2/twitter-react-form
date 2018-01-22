@@ -1,5 +1,6 @@
 import React from 'react';
 import NewsFeedCard from './NewsFeedCard';
+import PropTypes from 'prop-types';
 
 
 function NewsFeed(props){
@@ -22,7 +23,7 @@ function NewsFeed(props){
       marginRight: 50
     }
   };
-  console.log(props.newsFeed);
+
 
 
   return(
@@ -37,13 +38,14 @@ function NewsFeed(props){
         <NewsFeedCard
           title={newsfeedcard.title}
           description={newsfeedcard.description}
-          key={newsfeedcard.id}
-          />
+          key={newsfeedcard.id} />
       )}
     </div>
   );
-
-
 }
+
+NewsFeed.propTypes = {
+  newsFeed: PropTypes.array
+};
 
 export default NewsFeed;

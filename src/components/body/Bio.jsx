@@ -8,7 +8,7 @@ function Bio(){
       border: '1px solid green',
       marginTop: '20px'
     }
-  }
+  };
 
   return(
     <div style={styles.containerStyle}>

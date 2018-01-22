@@ -5,7 +5,7 @@ import NewsFeed from './NewsFeed';
 import SuggestedFeed from './SuggestedFeed';
 
 
-function Body(){
+function Body(props){
 const styles ={
   containerStyle: {
     display: 'flex'
@@ -20,7 +20,7 @@ const styles ={
       </div>
 
       <div>
-        <NewsFeed />
+        <NewsFeed newsFeed={props.newsFeed}/>
       </div>
 
       <div>

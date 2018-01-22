@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from './header/Header';
-import TicketList from './TicketList';
 import Body from './body/Body';
 import NewNewsFeedForm from './body/NewNewsFeedForm';
 import { Switch, Route } from 'react-router-dom';
+import NewsFeed from './body/NewsFeed';
 
 
 class App extends React.Component {
@@ -32,7 +32,7 @@ class App extends React.Component {
         </Switch>
       </div>
     );
-  } 
+  }
 }
 
 export default App;

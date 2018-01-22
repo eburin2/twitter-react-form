@@ -25,7 +25,8 @@ function Profile(){
       display: 'flex',
       justifyContent:'space-around'
     }
-  }
+  };
+
   return(
 
     <div style={styles.containerStyle}>

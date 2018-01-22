@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 function Search(){
   return(
-    <input placeholder="Search"></input>
+    <input placeholder='Search'></input>
   );
 }
 
