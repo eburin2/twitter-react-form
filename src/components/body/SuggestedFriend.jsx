@@ -14,7 +14,7 @@ function SuggestedFriend(props) {
       width: '50px',
       height: '50px'
     }
-  }
+  };
   return (
     <div style={styles.containerStyle}>
       <div style={styles.avatarStyle}></div>

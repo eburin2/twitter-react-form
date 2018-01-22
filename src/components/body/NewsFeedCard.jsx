@@ -1,6 +1,6 @@
 import React from 'react';
 
-function NewsFeedCard(){
+function NewsFeedCard(props){
   const styles = {
     containerStyle: {
       border: '1px solid black',
@@ -22,8 +22,8 @@ function NewsFeedCard(){
     <div style={styles.containerStyle}>
       <div style={styles.profilePic}></div>
       <div style={styles.flexItem}>
-        <h4>Card Title</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h4>{props.title}</h4>
+        <p>{props.description}</p>
       </div>
     </div>
   )

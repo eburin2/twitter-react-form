@@ -2,7 +2,7 @@ import React from 'react';
 import NewsFeedCard from './NewsFeedCard';
 
 
-function NewsFeed(){
+function NewsFeed(props){
   const styles = {
     containerStyle: {
       width: 500,
@@ -21,7 +21,9 @@ function NewsFeed(){
       marginLeft: 25,
       marginRight: 50
     }
-  }
+  };
+  console.log(props.newsFeed);
+
 
   return(
     <div style={styles.containerStyle}>
@@ -31,17 +33,17 @@ function NewsFeed(){
           <p>Whats happening?</p>
         </div>
       </div>
-
-      <NewsFeedCard />
-      <NewsFeedCard />
-      <NewsFeedCard />
-      <NewsFeedCard />
-      <NewsFeedCard />
-      <NewsFeedCard />
-
-
+      {props.newsFeed.map((newsfeedcard) =>
+        <NewsFeedCard
+          title={newsfeedcard.title}
+          description={newsfeedcard.description}
+          key={newsfeedcard.id}
+          />
+      )}
     </div>
   );
+
+
 }
 
 export default NewsFeed;

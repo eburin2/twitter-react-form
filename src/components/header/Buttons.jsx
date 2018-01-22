@@ -1,12 +1,11 @@
 import React from 'react';
 import Button from './Button';
+import { Link } from 'react-router-dom';
 
 function Buttons(){
   return(
     <div>
-      <Button name='Home'/>
-      <Button name='Notifications'/>
-      <Button name='Messages'/>
+      <Link to='/'>Home</Link> | <Link to='/newnewsfeedform'>Add News Feed</Link>
     </div>
   );
 }

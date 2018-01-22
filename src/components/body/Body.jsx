@@ -4,6 +4,7 @@ import Bio from './Bio';
 import NewsFeed from './NewsFeed';
 import SuggestedFeed from './SuggestedFeed';
 
+
 function Body(){
 const styles ={
   containerStyle: {
